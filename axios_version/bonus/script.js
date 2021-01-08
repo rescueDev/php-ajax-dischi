@@ -13,8 +13,12 @@ var app = new Vue({
   el: "#app",
   data: {
     dischi: [],
+    selected: "",
   },
   methods: {
+    whosSel() {
+      console.log(this.selected);
+    },
     filterAuth(author) {
       axios
         .get("data.php", {

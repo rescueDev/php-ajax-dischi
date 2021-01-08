@@ -23,13 +23,13 @@
 
 <body>
     <div id="app">
-        <select @change='filterAuth()' name="" id="">
-            <option value="" v-for='artisti in dischi'> {{artisti.author}} </option>
+        <select v-model="selected" @change='filterAuth(selected)' name="Select by Artist" id="">
+            <option value="All">All</option>
+            <option :value="artisti.author" v-for='artisti in dischi'> {{artisti.author}} </option>
         </select>
+
+        <!-- <button @click='filterAuth("Bon Jovi")'>BONJOVI</button> -->
         <div class="dischi">
-
-
-
 
             <div class="disco" v-for="disco in dischi">
 
