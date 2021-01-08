@@ -23,13 +23,13 @@
 
 <body>
     <div id="app">
+        <select @change='filterAuth()' name="" id="">
+            <option value="" v-for='artisti in dischi'> {{artisti.author}} </option>
+        </select>
         <div class="dischi">
 
 
-            <!-- <div class="buttons">
-                <select name="" id="">
-                    <option value="" v-for=''></option>
-                </select> -->
+
 
             <div class="disco" v-for="disco in dischi">
 

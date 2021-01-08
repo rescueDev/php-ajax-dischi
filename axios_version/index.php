@@ -25,12 +25,6 @@
     <div id="app">
         <div class="dischi">
 
-
-            <!-- <div class="buttons">
-                <select name="" id="">
-                    <option value="" v-for=''></option>
-                </select> -->
-
             <div class="disco" v-for="disco in dischi">
 
                 <img class='poster' :src="disco.poster" alt="">

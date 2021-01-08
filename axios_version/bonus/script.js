@@ -14,11 +14,21 @@ var app = new Vue({
   data: {
     dischi: [],
   },
-  methods: {},
+  methods: {
+    filterAuth(author) {
+      axios
+        .get("data.php", {
+          params: {
+            author: author,
+          },
+        })
+        .then((risposta) => {
+          this.dischi = risposta.data;
+          console.log(this.dischi);
+        });
+    },
+  },
   mounted: function () {
-    axios.get("data.php").then((risposta) => {
-      this.dischi = risposta.data;
-      console.log(this.dischi);
-    });
+    this.filterAuth();
   },
 });
