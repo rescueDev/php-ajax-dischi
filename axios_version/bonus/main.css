@@ -1,0 +1,40 @@
+body {
+  background: rgb(56, 53, 53);
+  color: wheat;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.dischi {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  height: 30px;
+  margin: 30px;
+}
+
+.disco {
+  width: calc(100% / 4);
+  min-height: 200px;
+  text-align: center;
+  margin: 10px;
+}
+
+.poster {
+  width: 150px;
+  height: 150px;
+}
