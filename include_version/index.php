@@ -17,22 +17,35 @@
     Bonus: nella versione a API, aggiungere la possibilita' di filtrare per artista, facendo attenzione a filtrare i dati nella location piu' corretta
     Nota1: utilizzare le sole tecnologie viste questa mattina
     Nota2: per chi avesse fatto esercizio simile in precedenza, e' possibile riciclare il CSS -->
+
     <?php
-    include 'data.php'
+    include 'data.php';
+    #var_dump($database)  
     ?>
-    <?php var_dump($database)  ?>
+
 </head>
 
 <body>
     <div id="app">
-        <div class="buttons">
-            <button></button>
-        </div>
-        <div class="dischi">
 
+        <div class="dischi">
+            <?php
+            foreach ($database as $key => $value) { ?>
+
+                <div class="disco">
+                    <?php
+
+                    echo '<img class="poster" src="' . $value['poster'] . ' ">' . '<br>';
+                    echo $value['title'] . '<br>';
+                    echo $value['author'] . '<br>';
+                    echo $value['year'] . '<br>';
+                    ?>
+                </div>
+            <?php   }
+            ?>
         </div>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
