@@ -23,6 +23,7 @@
 
 <body>
     <div id="app">
+
         <select v-model="selected" @change='filterAuth(selected)' name="Select by Artist" id="">
             <option value="All">All</option>
             <option :value="artisti" v-for='artisti in authors'> {{artisti}} </option>
