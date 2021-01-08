@@ -14,6 +14,7 @@ var app = new Vue({
   data: {
     dischi: [],
     selected: "",
+    authors: [],
   },
   methods: {
     whosSel() {
@@ -29,6 +30,12 @@ var app = new Vue({
         .then((risposta) => {
           this.dischi = risposta.data;
           console.log(this.dischi);
+
+          if (!this.authors.length) {
+            for (var i = 0; i < this.dischi.length; i++) {
+              this.authors.push(this.dischi[i].author);
+            }
+          }
         });
     },
   },

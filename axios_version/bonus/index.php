@@ -18,17 +18,16 @@
     Nota1: utilizzare le sole tecnologie viste questa mattina
     Nota2: per chi avesse fatto esercizio simile in precedenza, e' possibile riciclare il CSS -->
 
-    <?php   ?>
+
 </head>
 
 <body>
     <div id="app">
         <select v-model="selected" @change='filterAuth(selected)' name="Select by Artist" id="">
             <option value="All">All</option>
-            <option :value="artisti.author" v-for='artisti in dischi'> {{artisti.author}} </option>
+            <option :value="artisti" v-for='artisti in authors'> {{artisti}} </option>
         </select>
 
-        <!-- <button @click='filterAuth("Bon Jovi")'>BONJOVI</button> -->
         <div class="dischi">
 
             <div class="disco" v-for="disco in dischi">
