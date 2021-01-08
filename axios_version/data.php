@@ -41,4 +41,18 @@ $database = [
     ]
 ];
 
-echo json_encode($database);
+
+$filter = $_GET[('author')];
+
+$res = $database;
+
+for ($i = 0; $i < count($database); $i++) {
+    $disco = $database[$i];
+    if ($disco['author'] === $filter) {
+        $res = [];
+        $res[] = $disco;
+    }
+}
+
+
+echo json_encode($res);
