@@ -17,20 +17,30 @@
     Bonus: nella versione a API, aggiungere la possibilita' di filtrare per artista, facendo attenzione a filtrare i dati nella location piu' corretta
     Nota1: utilizzare le sole tecnologie viste questa mattina
     Nota2: per chi avesse fatto esercizio simile in precedenza, e' possibile riciclare il CSS -->
-    <?php
-    include 'data.php'
-    ?>
-    <?php var_dump($database)  ?>
+
+    <?php   ?>
 </head>
 
 <body>
     <div id="app">
-        <div class="buttons">
-            <button></button>
-        </div>
         <div class="dischi">
 
+
+            <!-- <div class="buttons">
+                <select name="" id="">
+                    <option value="" v-for=''></option>
+                </select> -->
+
+            <div class="disco" v-for="disco in dischi">
+
+                <img class='poster' :src="disco.poster" alt="">
+                <h3> {{disco.author}} </h3>
+                <h3> {{disco.title}} </h3>
+                <h3> {{disco.year}} </h3>
+
+            </div>
         </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
