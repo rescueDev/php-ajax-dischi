@@ -42,13 +42,13 @@ $database = [
 ];
 
 
-$filter = $_GET[('author')];
+$filter = strtolower($_GET[('author')]);
 
 $res = $database;
 
 for ($i = 0; $i < count($database); $i++) {
     $disco = $database[$i];
-    if ($disco['author'] === $filter) {
+    if (strtolower($disco['author']) === $filter) {
         $res = [];
         $res[] = $disco;
     }
